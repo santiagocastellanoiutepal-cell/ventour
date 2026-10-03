@@ -1,0 +1,385 @@
+/*MODIFICA TODOS LOS VALORES INICIALES DE LA PAGINA*/
+* {
+ margin: 0;  /*ELIMINA MARGENES POR DEFECTO LA PAGINA*/
+ padding: 0; /*ELIMINA MARGENES POR DEFECTO LA PAGINA*/
+ box-sizing: border-box; /*ANCHO Y ALTOS CALCULADOS INCLUYAN EL RELLENO (PADDING) Y LOS BORDES EVITANTO QUE LOS ELEMENTOS SE DESORDENEN*/
+ text-decoration: none; /*QUITA EL SUBRAYADO AUTOMATICO DE LOS ENLACES LA PAGINA*/
+ list-style: none; /*ELIMINA LAS BRIÑETAS O PUNTOS POR DEFECTO DE LOS ENLACES */
+}
+/*CUERPO DE LA PAGINA*/
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  /*TIPO DE LETRA DE LA PAGINA*/
+    font-size: 1rem; /*ESTABLECE EL TAMAÑO RELATIVO DE LA LETRA*/
+    background-color: #fdf7f7; /*DEFINE EL COLOR DE FONDO PARA LA PAGINA*/
+}
+
+/*CONTENEDOR DEL HEADER*/
+.container {
+    max-width: 1200px; /*ESTABLECE EL ANCHO MAX DEL BLOQUE*/
+    margin: 0 auto; /*CENTRA HORIZONTALMENTE EL CONTENEDOR EN LA PANTALLA*/
+}
+
+/*ENCABEZADO PRINCIPAL DE LA PAGINA*/
+.header {
+        position: relative; /*POSICIONA ELEMENTOS DENTRO DEL ENCABEZADO*/
+        background-image: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)),
+        url(img/portada.png); /*COLOCA UN FILTRO OSCURO SEMITRANSPARANTE SOBRE LA IMAGEN DE FONDO*/
+        background-position: center center; /*CENTRA LA IMAGEN DE FONDO TANTO VERTICAL COMO HORIZONTALMENTE*/
+        background-repeat: no-repeat; /*EVITA QUE LA IMAGEN DE FONDO SE REPITA*/
+        background-size: cover; /*ESCALA DE LA IMAGEN PARA QUE CUBRA TODO EL ESPACIO DEL CONTENEDOR SIN DISTORCIONARSE*/
+        min-height: 70vh; /*ASEGURA QUE EL ENCABEZADO OCUPE COMO MINIMO EL 70% DE ALTURA VISIBLE DE LA PANTALLA*/
+        display: flex; /*ACTIVA LA DISPOSICION FLEXBOX PARA CENTRAR VERTICALMENTE TODO EL CONTENIDO DE LA PAGINA*/
+        align-items: center;  /*ACTIVA LA DISPOSICION FLEXBOX PARA CENTRAR VERTICALMENTE TODO EL CONTENIDO DE LA PAGINA*/
+        background-attachment: fixed; /*DEJA LA IMAGEN DE FONDO FIJA MIENTRAS LA PAGINA SE DESPLAZA CREANDO EL EFECTO DE PARALLAX*/
+}
+
+/*MENU PRINCIPAL DE LA PAGINA*/
+.menu {
+    position: absolute; /*POSICIONA EL MENU EN LA PARTE SUPERIOR DEL CONTENEDOR */
+    top: 0;  /*ESTIRA EL MENU HORIZONTALMENTE A LO LARGO DE TODO EL ORDER SUPERIOR*/
+    left: 0; /*ESTIRA EL MENU HORIZONTALMENTE A LO LARGO DE TODO EL ORDER SUPERIOR*/
+    right: 0;  /*ESTIRA EL MENU HORIZONTALMENTE A LO LARGO DE TODO EL ORDER SUPERIOR*/
+    display: flex;  /*ACTIVA LA DISPOSICION FLEXBOX PARA ORANIZAR LOS ELEMENTOS HIJOS DE FORMA FLEXIBLE*/
+    align-items: center; /*CENTRA EL CONTENIDO LOGO Y NAVEGACION VERTICALMENTE*/
+    justify-content: space-between; /*DISTRIBUYE EL ESPACIO PARA SEPARAR LOGO HACIA LA IZQUIERDA Y EL MENU DE ENLACES HACIA LA DERECHA*/
+}
+
+/*ESTILOS DEL LOGO*/
+.logo {   
+    color: white; /*DEFINE EL COLOR DEL TEXTO DEL LOGO*/
+    font-size: 25px; /*ESTABLECE EL TAMAÑO DE LA TIPOGRAFIA DEL LOGO*/
+    font-weight: 800; /*APLICA UN GROSOR DE LETRA EN NEGRITA MUY MARCADO*/
+}
+
+/*ELEMENTOS DE LA LISTA*/
+.menu .navegador ul li {
+    position: relative; /*ESTABLECE UNA REFERENCIA DE POSICION FIJA*/
+    float: left; /*ALINEA LOS ELEMENTOS DE LA LISTA EN UNA FILA HORIZONTAL DE IZQUIERDA A DERECHA*/
+}
+
+/*ENLACES DE NAVEGACION*/
+.menu .navegador ul li a {
+    font-size: 18px; /*FIJA EL TAMAÑO DEL TEXTO*/
+    padding: 20px; /*AGREGA ESPACIO ALREDEDOR DEL TEXTO PARA AMPLIAR EL AREA DONDE SE PUEDE HACER CLIC*/
+    color: white;
+    display: block; /*CONVIERTE EL ENLACE EN UN ELEMENTO DE BLOQUE PARA QUE ACEPTE CORRECTAMENETE EL MARGEN E INTERLINEADO*/
+    font-weight: 600;
+}
+
+/*ESTADO FLOTANTE*/
+.menu .navegador ul li a:hover {
+    color: rgb(60, 191, 247); /*MODIFICA EL COLOR DEL TEXTO, CUANDO SE PASE EL CURSOR POR ENCIMA DEL ENLACE*/
+}
+
+/*CONTROL MENU*/
+#menu {
+    display: none; /*OCULTA EL ELEMENTO CON EL ID DEL MENU*/
+}
+
+.menu-icono {
+    width: 1px; /*DEFINE UN ANCHO AJUSTADO PARA EL ICONO DEL MENU*/
+}
+
+.menu label {
+    cursor: pointer; /*CAMBIA EL PUNTERO DEL RATON CUANDO PASA POR ENCIMA DE LOS ENLACES*/
+}
+
+/*CONTENEDOR DEL TITULO*/
+.Titulo {
+    text-align: center; /*CENTRA EL TEXTO HORIZONTALMENTE DENTRO DEL CONTENEDOR*/
+    width: 100%; /*OBLIGA AL CONTENEDOR ABARCAR TODO EL ANCHO DISPONIBLE*/
+    display: flex; /*ACTIVA LA MAQUETACION FLEXBOX*/
+    flex-direction: column; /*MODIFICA LA DIRECCION FLEXBOX PARA APILAR LOS ELEMENTOS HIJOS VERTICALMENTE UNO DEBAJO DE OTRO*/
+    align-items: center; /*CENTRA LOS ELEMENTOS HIJOS VERTICALMENTE EN EL EJE SECUNDARIO DE LA COLUMNA*/
+}
+
+/*TITULO PRINCIPAL*/
+.header section  h1 {
+    font-size: 2.3rem; /*FIJA EL TAMAÑO DEL TEXTO*/
+    line-height: 80px; /*ESTABLECE LA ALTURA DEL REGLON EN 80PX*/
+    color: #f9fafc; 
+    text-transform: uppercase; /*TRANSFORMA TODO EL TEXTO EN MAYUSCULA*/
+    margin-bottom: 35px; /*CREA UNA SEPARACION RESPECTO AL ELEMENTO INFERIOR*/
+}
+
+/*PARRAFO DESCRIPTIVO*/
+.Titulo p {
+    font-size: 16px; 
+    color: #c5c5c5;
+    padding: 0 250px; /*AGREGA 0 PX DE ESPACIO INTERNO ARRIBA/ABAJO Y 250PX A LOS LATERALES IZUIERDA/DERECHA*/
+    margin-bottom: 0.5px; /*APLICA UNA SEPARACION MINIMA INFERIOR DE 0.5PX*/
+}
+
+
+.Titulo h4 {
+    font-size: 14px;
+    color: rgb(46, 172, 226);
+    margin-bottom: 25px;
+}
+/*estilos del boton*/
+.btn-1 {
+    display: inline-block; /*PERMITE QUE EL BOTON DE ALINEE JUNTO A OTROS ELEMENTOS DE LA MISMA FILA*/
+    padding: 11px 35px; /*AÑADE UN ESPACIO INTERNO 11PX(ARRIBA/ABAJO) Y 35PX(IZQ/DER)*/
+    background-color: #1a84c2;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    border-radius: 12px; /*REDONDEA LOS BORDES DEL BOTON*/
+}
+
+.Titulo a:hover {
+    color: rgba(230, 233, 234, 0.8);
+}
+
+.btn-1:hover {
+    background-color: rgb(40, 155, 255);
+}
+
+/*SEGUNDO CONTENEDOR*/
+.container2 {
+    padding: 100px 0; /*CREA UN ESPACIO INTERNO DE 100PX EN LA PARTE SUPERIOR E IFERIOR Y 0PX A LOS LATERALES*/
+    background-color: #f9fafc;
+    position: relative;
+}
+
+.referencia {
+    text-align: center;
+}
+
+.referencia h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #0a4567;
+    text-transform: uppercase;
+    padding: 0 250px;
+    margin-bottom: 15px;
+}
+
+.txt-p {
+    font-size: 16px;
+    color: #0e8ec5;
+    padding: 0 250px;
+    margin-bottom: 35px;
+}
+
+/*CONTENEDOR DE TARJETAS*/
+.contenedor-tarjeta {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)),
+        url(img/normal.jpg);
+    background-size: cover; /*ESCALA DE LA IMAGEN PARA CUBRIR COMPLETAMENTE TODO EL FONDO*/
+    background-position: center; /*CENTRA LA IMAGEN DE FONDO TANTO VERTICAL COMO HORIZONTALMENTE*/
+    background-repeat: no-repeat;
+    width: 100%; /*OCUPA EL 100% DEL ANCHO DISPONIBLE*/
+    max-width: 1800px; /*LIMITA EL ANCHO MAXIMO DEL CONTENEDOR A 1800PX PARA PANTALLAS MUY ANCHAS*/
+    padding-top: 60px; /*AGREGA 60PX DE ESPACIO INTERNO ARRIBA Y ABAJO*/
+    padding-bottom: 60px; /*AGREGA 60PX DE ESPACIO INTERNO ARRIBA Y ABAJO*/
+    min-height: 80vh; /*GARANTIZA UNA ALTURA MINIMA EQUIVALENTE AL 80% DEL ALTO VISIBLE DE LA PANTALLA*/
+    display: flex; /*ACTIVA EL MODELO FLEXBOX PARA ORGANIZAR LAS TARJETAS*/
+    flex-wrap: wrap; /*PERMTEN QUE LAS TARJETAS PASEN A LA SIGUIENTE FILA SI NO CABEN EN LA MISMA*/
+    justify-content: center; /*CENTRA HORIZONTALMENTE LAS TARJETAS DENTRO DEL CONTENEDOR*/
+    gap: 30px; /*CREA UNA SEPARACION UNIFORME DE 30PX ENTRE TARJETA Y TARJETA*/
+    margin: 0; /*ELIMINA LOS MARGENES EXTERIORES DEL CONTENEDOR*/
+}
+
+.tarjeta {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /*APLICA UNA SOMBRA INFERIOR DE 12PX DE DIFUMINADO Y 40% DE OPACIDAD PARA DAR LA SENSACION DE ELEVACION SOBRE EL FONDO*/
+    width: 320px; /*FIJA EL ANCHO EXACTO DE CADA TARJETA EN 320PX*/
+    overflow: hidden; /*OCULTA CUALQUIER ELEMENTO INTERNO QUE SOBRESALGA DE LA TARJETA*/
+    text-align: center; /*CENTRA HORIZONTALMENTE TODO EL TEXTO DENTRO DE LA TARJETA*/
+    transition-delay:  0.3s ease; /*CONFIGURA LA TRANSICION/SUAVIDAD PARA LOS CAMIOS DE ESTADO (ANIMACION)*/
+    cursor: pointer;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px); /*ELEVA LA TARJETA 5PX HACIA ARRIVA CUANDO EL USUARIO COLOCA EL RATON SOBRE ELLA, CREANDO UN EFECTO FLOTANTE*/
+}
+
+.tarjeta img {
+    width: 100%; /*OCUPA TODO EL ANCHO DEL CONTENEDOR DE LA TARJETA*/
+    height: 200px; /*ESTABLECE UNA ALTURA FIJA DE 200PX PARA LA IMAGEN*/
+    object-fit: cover; /*ESCALA Y RECORTAR LA IMAGEN PARA QUE LLENE EL ESPACIO DE 200PX SIN DEFORMARSE*/
+    display: block; /*MUESTRA LA IMAGEN COMO UN ELEMENTO DE BLOQUE, ELIMINANDO EL ESPACIO NO DESEADO*/
+}
+
+.tarjeta h3 {
+    margin: 15px 0 10px; /*ASIGNA UN MARGEN DE 15PX ARRIBA 0 A LOS LADOS Y 10PX ABAJO*/
+    font-size: 1.2rem; /*FIJA EL TAMAÑO DEL TEXTO*/
+    color: #333; /*FIJA EL COLOR DEL TEXTO*/
+}
+
+/*BOTON DE LA TARJETA*/
+.tarjeta .btn-tarjeta {
+    display: inline-block; /*PERMITE AL BOTON COMPORTARSE EN LINEA PERO RESPETANDO MARGENES Y DIMENSIONES DEL BLOQUE*/
+    margin-bottom: 20px; /*AÑADE UN ESPACIO EN LA PARTE INFERIOR*/
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold; /*APLICA UN ESTILO DE FUENTE EN NEGRITA*/
+}
+
+.tarjeta a:hover {
+    color: cadetblue;
+    transition-delay:  0.3s ease; /*APLICA UN RETARDO/SUAVIDAD DE 0.3SG PARA QUE LA TRANSICION DE CAMBIO DE COLOR NO SEA ABRUPTA*/
+    
+}
+
+.Destinos1 {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)),
+        url(img/astracto.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed; /*DEJA LA IMAGEN INMOVIL MIENTRAS EL USUARIO HACE DESPLAZAMIENTO LOGRANDO UN EFECTO DE TIPO PARALLEX*/
+        padding: 100px 0; /*CREA UN ESPACIO INTERNO DE 100PX ARRIBA Y ABAJO Y 0PX A LOS LATERALES*/
+        margin-top: 80px; /*AGREGA UNA SEPARACION DE 80PX EN LA PARTE SUPERIOR PARA ALEJARSE DE LA SEPARACION PREVIA*/
+}
+
+.destinos-container {
+    text-align: center;
+}
+
+.destinos-container h2 {
+    font-size: 60px;
+    line-height: 70px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.destinos-nuevos h3 {
+    font-size: 16px;
+    color: #fcfcfc;
+    margin-bottom: 50px;
+    padding: 0 100px;
+}
+
+.destinos-nuevos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+ }
+
+.Destino-1 {
+    background-color: rgba(4, 197, 255, 0.4);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 380px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.20);
+}
+
+.Destino-1 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /*ESCALA LA IMAGEN PARA LLENAR EL ESPACIO SIN DEFORMARLA NI ESTIRARLA*/
+}
+
+.paquete  {
+    text-decoration: none;
+    color: rgb(232, 245, 244);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+
+}
+    
+
+.paquete:hover {
+    color: #001eff;
+}
+
+.destinos-container p {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0.5rem;
+}
+
+
+.texto-relleno {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)),
+        url(img/Los\ llanos\ de\ venezuela.png);
+        background-size: cover; /*escala de la imagen para cubrir el contenedor sin distorcionarse*/
+        background-attachment: fixed; /*crea un efecto de desplaamiento tipo parallex*/
+        width: 98%; /*hace que el contenedor ocupe un 98% del ancho de la pantalla*/
+        max-width: 1300px; /*fija un tope de 1300px en monitores grandes*/
+        margin: 40px auto; /*otroga un margen externo de 40px arriba/abajo y centra el contenedor horizontalmente*/
+        border-radius: 12px; 
+        box-sizing: border-box; /*garantiza que el relleno(padding) se incluya dentro del ancho total del elemento para que no desborde*/
+        text-align: center; /*centra horizontalmente todo el contenido textual interior*/
+        padding: 40px 30px; /*Agrea un espacio interno de 40px arriba/abajo y 30px a los lados*/
+}
+
+.texto-relleno p {
+    color: #d4e4e7;
+    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1.6; /*Aumenta el espacio vertical entre lineas para mejorar la legibilidad*/
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.texto-relleno {
+    font-style: oblique;
+    font-weight: 600;
+    margin-top: 15px;
+    display: block;
+}
+
+.amarillo {
+    color: rgb(255, 222, 11);
+}
+
+.azul {
+    color: #1639d5;
+}
+
+.rojo {
+    color: #fb1010;
+}
+
+.footer {
+   display: flex; /*convierte el pie de pagina en un contenedor flexible*/
+   flex-direction: column; /*aplica los elementos hijos de forma vertical*/
+   align-items: center; /*centra horizontalmente los elementos dentro de la pagina*/
+   justify-content: center; /*centra verticalmente el contenido del contenedor*/
+   background-color: #111111; /*Aplica un fondo gris oscuro*/
+   color: #ffffff; /*color del texto*/
+   gap: 20px; /*genera una separacion vertical entre cada seccion interna del footer*/
+   padding: 20px 20px; /*Añade una separacion arriba/abajo y a los lados*/
+   width: 100%; /*obliga al pie de pagina a ocupar todo el ancho disponible de la pantalla*/
+}
+
+.link {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.link li a {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #a0aec0;
+    text-align: center;
+    
+}
+
+.link li a:hover {
+    color: #007bff;
+}
